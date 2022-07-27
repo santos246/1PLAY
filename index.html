@@ -13,6 +13,53 @@
 <meta name="keywords" content="1PLAY, 1, PLAY">
 <CENTER><FONT SIZE=+2>
 <!---------------------------------------------------------------------->
+<!---------------------------------------------------------------------->
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+</style>
+</head>
+<body>
+
+
+<!---------------------------------------------------------------------->
 <!DOCTYPE html>
 <html>
 <head>
@@ -130,7 +177,9 @@ document.write('  '+todaysDate);
 </html>
 <BR/><HR/>
 <!-------------------------------------------------------------->
-<!---------------------------------------------------------------------->
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+<ul id="myUL">
 <!---------------------------------------------------------------------->
 <BR/>
 <!DOCTYPE html>
@@ -167,65 +216,65 @@ CLIQUE NO NOME DO VIDEO ABAIXO<BR/> PARA O VIDEO RODAR<BR/>
 <!---------------------------------------------------------------------->
 <!---------------------------------------------------------------------->
 <!------------------------------------------------------------------------>
-<p><a href="0 VIDEOS/
-https://diariodonordeste.verdesmares.com.br/ultima-hora
-.html" target="meu_iframe">
-DIARIO DO NORDESTE
-</a></p>
-<!------------------------------------------------------------------------>
-<p><a href="0 VIDEOS/
+<li><a href="0 VIDEOS/
 LINK🔴
 .html" target="meu_iframe">
 FILME1🔴
-</a></p>
+</a></li>
 <!------------------------------------------------------------------------>
-<p><a href="0 VIDEOS/
+<li><a href="0 VIDEOS/
 LINK🔴
 .html" target="meu_iframe">
 FILME1🔴
-</a></p>
+</a></li>
 <!------------------------------------------------------------------------>
-<p><a href="0 VIDEOS/
+<li><a href="0 VIDEOS/
 LINK🔴
 .html" target="meu_iframe">
 FILME1🔴
-</a></p>
+</a></li>
 <!------------------------------------------------------------------------>
-<p><a href="0 VIDEOS/
+<li><a href="0 VIDEOS/
 LINK🔴
 .html" target="meu_iframe">
 FILME1🔴
-</a></p>
+</a></li>
 <!------------------------------------------------------------------------>
-<p><a href="0 VIDEOS/
+<li><a href="0 VIDEOS/
 LINK🔴
 .html" target="meu_iframe">
 FILME1🔴
-</a></p>
+</a></li>
 <!------------------------------------------------------------------------>
-<p><a href="0 VIDEOS/
+<li><a href="0 VIDEOS/
 LINK🔴
 .html" target="meu_iframe">
 FILME1🔴
-</a></p>
+</a></li>
 <!------------------------------------------------------------------------>
-<p><a href="0 VIDEOS/
+<li><a href="0 VIDEOS/
 LINK🔴
 .html" target="meu_iframe">
 FILME1🔴
-</a></p>
+</a></li>
 <!------------------------------------------------------------------------>
-<p><a href="0 VIDEOS/
+<li><a href="0 VIDEOS/
 LINK🔴
 .html" target="meu_iframe">
 FILME1🔴
-</a></p>
+</a></li>
 <!------------------------------------------------------------------------>
-<p><a href="0 VIDEOS/
+<li><a href="0 VIDEOS/
 LINK🔴
 .html" target="meu_iframe">
 FILME1🔴
-</a></p>
+</a></li>
+<!------------------------------------------------------------------------>
+<li><a href="0 VIDEOS/
+LINK🔴
+.html" target="meu_iframe">
+FILME1🔴
+</a></li>
 <!------------------------------------------------------------------------>
 
 
@@ -235,7 +284,30 @@ FILME1🔴
 
 
 
+</ul>
 
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+</body>
+</html>
+<!---------------------------------------------------------------------->
 <!------------------------------------------------------------------------>
 <!------------------------------------------------------------------------>
 <hr/><!DOCTYPE html>
